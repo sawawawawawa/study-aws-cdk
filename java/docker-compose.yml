@@ -1,0 +1,11 @@
+version: '4'
+
+services:
+  app:
+    container_name: study-aws-cdk-java
+    build:
+      context: .
+    volumes:
+      - .:/usr/local/study-aws-cdk
+    working_dir: /usr/local/study-aws-cdk
+    tty: true
