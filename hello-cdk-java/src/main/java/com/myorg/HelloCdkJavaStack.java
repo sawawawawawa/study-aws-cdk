@@ -1,5 +1,6 @@
 package com.myorg;
 
+import software.amazon.awscdk.services.s3.Bucket;
 import software.constructs.Construct;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
@@ -20,5 +21,8 @@ public class HelloCdkJavaStack extends Stack {
         // final Queue queue = Queue.Builder.create(this, "HelloCdkJavaQueue")
         //         .visibilityTimeout(Duration.seconds(300))
         //         .build();
+
+        Bucket.Builder.create(this, "MyFirstBucket")
+                .versioned(true).build();
     }
 }
